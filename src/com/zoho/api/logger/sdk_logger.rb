@@ -17,7 +17,7 @@ module ZOHOCRMSDK
         return Logger.new(File.open(File::NULL, 'w')) if self.level == Levels::OFF
 
         logger = self.path.nil? ? Logger.new(STDOUT) : Logger.new(self.path)
-        logger.level = self.level ? Object.const_get("LOGGER::#{self.level}") : Logger::INFO
+        logger.level = self.level ? Object.const_get("Logger::#{self.level}") : Logger::INFO
         logger
       end
     end
