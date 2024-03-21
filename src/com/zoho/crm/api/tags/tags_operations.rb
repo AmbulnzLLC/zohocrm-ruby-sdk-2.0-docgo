@@ -178,7 +178,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         api_path = api_path + '/'
         api_path = api_path + record_id.to_s
@@ -210,7 +210,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         api_path = api_path + '/'
         api_path = api_path + record_id.to_s
@@ -238,7 +238,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         api_path = api_path + '/actions/add_tags'
         handler_instance.api_path = api_path
@@ -264,7 +264,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         api_path = api_path + '/actions/remove_tags'
         handler_instance.api_path = api_path

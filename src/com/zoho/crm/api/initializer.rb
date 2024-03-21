@@ -25,7 +25,7 @@ require_relative 'util/constants'
 module ZOHOCRMSDK
   # This class to initialize Zoho CRM SDK.
   class Initializer
-    attr_accessor :json_details,:user, :environment, :store, :token, :initializer, :local, :sdk_config, :resources_path, :request_proxy
+    attr_accessor :json_details,:user, :environment, :store, :token, :initializer, :local, :sdk_config, :resources_path, :request_proxy, :api_version
     @@json_details = nil
 
     Thread.current['initi'] = nil
@@ -34,7 +34,7 @@ module ZOHOCRMSDK
       @@json_details
     end
 
-    def self.initialize(user:, environment:, token:, store: nil, sdk_config: nil, resources_path: nil, log: nil, request_proxy: nil)
+    def self.initialize(user:, environment:, token:, store: nil, sdk_config: nil, resources_path: nil, log: nil, request_proxy: nil, api_version: 2)
       error = {}
 
       require_relative 'user_signature'
@@ -115,7 +115,9 @@ module ZOHOCRMSDK
         raise SDKException.new(Constants::INITIALIZATION_ERROR, Constants::RESOURCE_PATH_INVALID_ERROR_MESSAGE, nil, nil)
       end
 
-      log = SDKLog::Log.initialize(level: Levels::INFO, path: File.join(Dir.pwd, Constants::LOG_FILE_NAME)) if log.nil? 
+      # Unless otherwise passed in, logging will be to filesystem using the WEBrick::BasicLog logger
+      log = SDKLog::Log.initialize(level: Levels::INFO, path: File.join(Dir.pwd, Constants::LOG_FILE_NAME)) if log.nil?
+
       SDKLog::SDKLogger.initialize(log)
 
       @@initializer = Initializer.new
@@ -133,6 +135,8 @@ module ZOHOCRMSDK
       @@initializer.resources_path = resources_path
 
       @@initializer.request_proxy = request_proxy
+
+      @@initializer.api_version = api_version
 
       @@json_details = get_JSONDetails
 
@@ -236,6 +240,8 @@ module ZOHOCRMSDK
       initializer.resources_path = @@initializer.resources_path
 
       initializer.request_proxy = request_proxy
+
+      initializer.api_version = @@initializer.api_version
 
       Thread.current['initi'] = initializer
 

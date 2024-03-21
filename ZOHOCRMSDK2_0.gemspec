@@ -25,5 +25,4 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'multipart-post', '~> 2.0'
   spec.add_runtime_dependency 'rest-client', '~> 2.0'
   spec.add_runtime_dependency 'uri', '~> 0.10'
-  spec.add_runtime_dependency 'mysql2', '~> 0.5.2'
 end
