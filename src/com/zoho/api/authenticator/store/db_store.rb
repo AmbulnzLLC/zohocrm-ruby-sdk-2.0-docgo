@@ -16,7 +16,7 @@ module ZOHOCRMSDK
       # @param password A String containing the DataBase password.
       # @param port_number A String containing the DataBase port number.
       def initialize(host: Constants::MYSQL_HOST, database_name: Constants::MYSQL_DATABASE_NAME ,table_name: Constants::MYSQL_TABLE_NAME,user_name: Constants::MYSQL_USER_NAME,password: '',port_number: Constants::MYSQL_PORT_NUMBER )
-        require 'mysql2' unless const_defined?(:Mysql2)
+        require 'mysql2' unless Object.const_defined?(:Mysql2)
 
         @host = host
         @database_name = database_name
