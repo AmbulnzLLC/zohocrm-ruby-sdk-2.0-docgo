@@ -342,7 +342,7 @@ class Initialize
         #1 -> Level of the log messages to be logged. Can be configured by typing Levels "::" and choose any level from the list displayed.
         # 2 -> Absolute file path, where messages need to be logged.
         
-        log = ZOHOCRMSDK::SDKLog::Log.initialize(level:Levels::INFO, path:"/Users/user_name/Documents/rubysdk_log.log")
+        log = ZOHOCRMSDK::SDKLog::Log.initialize(level:ZOHOCRMSDK::Levels::INFO, path:"/Users/user_name/Documents/rubysdk_log.log")
 
         # or if using your own Logger such as Rails.logger
         # log = Rails.logger
