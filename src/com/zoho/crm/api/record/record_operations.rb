@@ -38,7 +38,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         api_path = api_path + '/'
         api_path = api_path + id.to_s
@@ -75,7 +75,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         api_path = api_path + '/'
         api_path = api_path + id.to_s
@@ -113,7 +113,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         api_path = api_path + '/'
         api_path = api_path + id.to_s
@@ -145,7 +145,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_GET
@@ -176,7 +176,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_POST
@@ -208,7 +208,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_PUT
@@ -240,7 +240,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_DELETE
@@ -270,7 +270,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         api_path = api_path + '/upsert'
         handler_instance.api_path = api_path
@@ -303,7 +303,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         api_path = api_path + '/deleted'
         handler_instance.api_path = api_path
@@ -334,7 +334,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         api_path = api_path + '/search'
         handler_instance.api_path = api_path
@@ -390,7 +390,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         api_path = api_path + '/'
         api_path = api_path + id.to_s
@@ -421,7 +421,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         api_path = api_path + '/'
         api_path = api_path + id.to_s
@@ -452,7 +452,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         api_path = api_path + '/'
         api_path = api_path + id.to_s
@@ -479,7 +479,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         api_path = api_path + '/actions/mass_update'
         handler_instance.api_path = api_path
@@ -508,7 +508,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         api_path = api_path + '/actions/mass_update'
         handler_instance.api_path = api_path
@@ -542,7 +542,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         api_path = api_path + '/'
         api_path = api_path + external_field_value.to_s
@@ -579,7 +579,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         api_path = api_path + '/'
         api_path = api_path + external_field_value.to_s
@@ -617,7 +617,7 @@ module ZOHOCRMSDK
         end
         handler_instance = Handler::CommonAPIHandler.new
         api_path = ''
-        api_path = api_path + '/crm/v2/'
+        api_path = api_path + "/crm/v#{Initializer.get_initializer.api_version}/"
         api_path = api_path + module_api_name.to_s
         api_path = api_path + '/'
         api_path = api_path + external_field_value.to_s

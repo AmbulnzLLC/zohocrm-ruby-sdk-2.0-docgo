@@ -203,13 +203,14 @@ require 'ZOHOCRMSDK2_0'
 
 Before you get started with creating your Ruby application, you need to register your client and authenticate the app with Zoho.
 
-| Mandatory Keys    | Optional Keys |
-| :---------------- | :------------ |
-| user              | logger        |
-| environment       | store         |
-| token             | sdk_config    |
-|                   | proxy         |
-|                   | resource_path |
+| Mandatory Keys    | Optional Keys               |
+| :---------------- |:----------------------------|
+| user              | logger                      |
+| environment       | store                       |
+| token             | sdk_config                  |
+|                   | proxy                       |
+|                   | resource_path               |
+|                   | api_version (defaults to 2) |
 ----
 
 - Create an instance of **[UserSignature](resources/UserSignature.md#usersignature)** that identifies the current user.
@@ -248,9 +249,13 @@ Before you get started with creating your Ruby application, you need to register
     ```
 
 - Create an instance of **[SDKLog::Log](resources/logger/Logger.md#logger)** Class to log exception and API information. By default, the SDK constructs a Logger instance with level - INFO and file_path - (sdk_logs.log, created in the current working directory)
+  * Or pass in a custom Logger such as `Rails.logger` or any Ruby `Logger` instance
 
     ```ruby
+    # log = Rails.logger
+    
     #
+        # OR
         # Create an instance of SDKLog::Log Class that takes two parameters
         # 1 -> Level of the log messages to be logged. Can be configured by typing Levels "::" and choose any level from the list displayed.
         # 2 -> Absolute file path, where messages need to be logged.
@@ -318,6 +323,12 @@ Before you get started with creating your Ruby application, you need to register
     request_proxy = ZOHOCRMSDK::RequestProxy.new(host:"proxyHost", post:"proxyPort", user_name:"proxyUser", password:"password")
     ```
 
+- Set the `api_version` if desired, for the Zoho CRM REST API. `2` is default. See [Zoho CRM APIs](https://www.zoho.com/crm/developer/docs/api)
+
+    ```ruby
+    api_version = 2
+    ```
+
 ## Initializing the Application
 
 Initialize the SDK using the following code.
@@ -331,8 +342,11 @@ class Initialize
         #1 -> Level of the log messages to be logged. Can be configured by typing Levels "::" and choose any level from the list displayed.
         # 2 -> Absolute file path, where messages need to be logged.
         
-        log = ZOHOCRMSDK::SDKLog::Log.initialize(level:Levels::INFO, path:"/Users/user_name/Documents/rubysdk_log.log")
+        log = ZOHOCRMSDK::SDKLog::Log.initialize(level:ZOHOCRMSDK::Levels::INFO, path:"/Users/user_name/Documents/rubysdk_log.log")
 
+        # or if using your own Logger such as Rails.logger
+        # log = Rails.logger
+        
         #Create an UserSignature instance that takes user Email as parameter
         user_signature = ZOHOCRMSDK::UserSignature.new('abc@zohocorp.com')
 
@@ -400,6 +414,9 @@ class Initialize
         
         request_proxy = ZOHOCRMSDK::RequestProxy.new(host:"proxyHost", post:"proxyPort", user_name:"proxyUser", password:"password")
 
+        # Set the api_version if desired, for the Zoho CRM REST API. 2 is default.
+        
+        api_version = 2
         
         # The initialize method of Initializer class that takes the following arguments
         # 1 -> UserSignature instance
@@ -413,7 +430,7 @@ class Initialize
 
         #The following is the initialize method
 
-        ZOHOCRMSDK::Initializer.initialize(user: user_signature, environment: environment, token: token, store: tokenstore, sdk_config: sdk_config, resources_path: resource_path,log:log,request_proxy: request_proxy)
+        ZOHOCRMSDK::Initializer.initialize(user: user_signature, environment: environment, token: token, store: tokenstore, sdk_config: sdk_config, resources_path: resource_path,log:log,request_proxy: request_proxy, api_version: api_version)
     end
 end
 
