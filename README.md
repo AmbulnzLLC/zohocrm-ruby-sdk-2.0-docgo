@@ -344,6 +344,9 @@ class Initialize
         
         log = ZOHOCRMSDK::SDKLog::Log.initialize(level:Levels::INFO, path:"/Users/user_name/Documents/rubysdk_log.log")
 
+        # or if using your own Logger such as Rails.logger
+        # log = Rails.logger
+        
         #Create an UserSignature instance that takes user Email as parameter
         user_signature = ZOHOCRMSDK::UserSignature.new('abc@zohocorp.com')
 
