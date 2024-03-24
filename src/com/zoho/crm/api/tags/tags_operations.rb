@@ -22,8 +22,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: param_instance EXPECTED TYPE: ParameterMap', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/settings/tags'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/settings/tags"
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_GET
         handler_instance.category_method = 'READ'
@@ -45,8 +44,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: param_instance EXPECTED TYPE: ParameterMap', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/settings/tags'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/settings/tags"
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_POST
         handler_instance.category_method = 'CREATE'
@@ -71,8 +69,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: param_instance EXPECTED TYPE: ParameterMap', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/settings/tags'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/settings/tags"
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_PUT
         handler_instance.category_method = 'UPDATE'
@@ -101,8 +98,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: param_instance EXPECTED TYPE: ParameterMap', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/settings/tags/'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/settings/tags/"
         api_path = api_path + id.to_s
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_PUT
@@ -123,8 +119,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: id EXPECTED TYPE: Integer', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/settings/tags/'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/settings/tags/"
         api_path = api_path + id.to_s
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_DELETE
@@ -146,8 +141,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: request EXPECTED TYPE: MergeWrapper', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/settings/tags/'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/settings/tags/"
         api_path = api_path + id.to_s
         api_path = api_path + '/actions/merge'
         handler_instance.api_path = api_path
@@ -289,8 +283,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: param_instance EXPECTED TYPE: ParameterMap', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/settings/tags/'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/settings/tags/"
         api_path = api_path + id.to_s
         api_path = api_path + '/actions/records_count'
         handler_instance.api_path = api_path

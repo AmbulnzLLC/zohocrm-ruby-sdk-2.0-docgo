@@ -361,8 +361,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: request EXPECTED TYPE: ConvertBodyWrapper', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/Leads/'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/Leads/"
         api_path = api_path + id.to_s
         api_path = api_path + '/actions/convert'
         handler_instance.api_path = api_path

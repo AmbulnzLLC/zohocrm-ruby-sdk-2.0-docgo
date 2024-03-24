@@ -19,8 +19,7 @@ module ZOHOCRMSDK
       # @raise SDKException
       def get_contact_roles
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/Contacts/roles'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/Contacts/roles"
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_GET
         handler_instance.category_method = 'READ'
@@ -37,8 +36,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: request EXPECTED TYPE: BodyWrapper', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/Contacts/roles'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/Contacts/roles"
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_POST
         handler_instance.category_method = 'CREATE'
@@ -58,8 +56,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: request EXPECTED TYPE: BodyWrapper', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/Contacts/roles'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/Contacts/roles"
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_PUT
         handler_instance.category_method = 'UPDATE'
@@ -79,8 +76,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: param_instance EXPECTED TYPE: ParameterMap', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/Contacts/roles'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/roles"
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_DELETE
         handler_instance.category_method = Constants::REQUEST_METHOD_DELETE
@@ -98,8 +94,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: id EXPECTED TYPE: Integer', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/Contacts/roles/'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/Contacts/roles/"
         api_path = api_path + id.to_s
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_GET
@@ -121,8 +116,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: request EXPECTED TYPE: BodyWrapper', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/Contacts/roles/'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/Contacts/roles/"
         api_path = api_path + id.to_s
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_PUT
@@ -142,8 +136,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: id EXPECTED TYPE: Integer', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/Contacts/roles/'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/roles/"
         api_path = api_path + id.to_s
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_DELETE
@@ -165,8 +158,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: param_instance EXPECTED TYPE: ParameterMap', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/Deals/'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/Deals/"
         api_path = api_path + deal_id.to_s
         api_path = api_path + '/Contact_Roles'
         handler_instance.api_path = api_path
@@ -192,8 +184,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: deal_id EXPECTED TYPE: Integer', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/Deals/'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/Deals/"
         api_path = api_path + deal_id.to_s
         api_path = api_path + '/Contact_Roles/'
         api_path = api_path + contact_id.to_s
@@ -223,8 +214,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: request EXPECTED TYPE: RecordBodyWrapper', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/Deals/'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/Deals/"
         api_path = api_path + deal_id.to_s
         api_path = api_path + '/Contact_Roles/'
         api_path = api_path + contact_id.to_s
@@ -250,8 +240,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: deal_id EXPECTED TYPE: Integer', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/Deals/'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/Deals/"
         api_path = api_path + deal_id.to_s
         api_path = api_path + '/Contact_Roles/'
         api_path = api_path + contact_id.to_s

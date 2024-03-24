@@ -22,8 +22,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: header_instance EXPECTED TYPE: HeaderMap', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/settings/modules'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/settings/modules"
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_GET
         handler_instance.category_method = 'READ'
@@ -41,8 +40,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: api_name EXPECTED TYPE: String', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/settings/modules/'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/settings/modules/"
         api_path = api_path + api_name.to_s
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_GET
@@ -64,8 +62,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: request EXPECTED TYPE: BodyWrapper', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/settings/modules/'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/settings/modules/"
         api_path = api_path + api_name.to_s
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_PUT
@@ -89,8 +86,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: request EXPECTED TYPE: BodyWrapper', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/settings/modules/'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/settings/modules/"
         api_path = api_path + id.to_s
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_PUT

@@ -26,8 +26,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: param_instance EXPECTED TYPE: ParameterMap', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/files'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/files"
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_POST
         handler_instance.category_method = 'CREATE'
@@ -48,8 +47,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: param_instance EXPECTED TYPE: ParameterMap', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/files'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/files"
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_GET
         handler_instance.category_method = 'READ'

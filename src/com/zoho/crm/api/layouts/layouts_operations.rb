@@ -22,8 +22,7 @@ module ZOHOCRMSDK
       # @raise SDKException
       def get_layouts
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/settings/layouts'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/settings/layouts"
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_GET
         handler_instance.category_method = 'READ'
@@ -41,8 +40,7 @@ module ZOHOCRMSDK
           raise SDKException.new(Constants::DATA_TYPE_ERROR, 'KEY: id EXPECTED TYPE: Integer', nil, nil)
         end
         handler_instance = Handler::CommonAPIHandler.new
-        api_path = ''
-        api_path = api_path + '/crm/v2/settings/layouts/'
+        api_path = "/crm/v#{Initializer.get_initializer.api_version}/settings/layouts/"
         api_path = api_path + id.to_s
         handler_instance.api_path = api_path
         handler_instance.http_method = Constants::REQUEST_METHOD_GET
