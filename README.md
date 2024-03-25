@@ -1,3 +1,12 @@
+# NOTICE: This is an unsupported Fork with additional contributions (bug fixes and enhancements)
+
+This is a fork of the official [zohocrm-ruby-sdk-2.0](https://github.com/zoho/zohocrm-ruby-sdk-2.0)
+* This fork is unsupported and comes with no warranty or guarantees
+* This fork is published under the `ZOHOCRMSDK2_0_docgo` gem name
+* It should be backwards-compatible with the original gem but nothing is guaranteed
+* Changes are listed in [CHANGELOG.md](CHANGELOG.md)
+* See all changes/contributions since the fork via this diff: [ALL CHANGES SINCE FORK](https://github.com/AmbulnzLLC/zohocrm-ruby-sdk-2.0-docgo/compare/0115105...master)
+
 # Ruby SDK API version 2.0
 
 ## Overview
@@ -29,10 +38,10 @@ RUBY SDK requires Ruby (version 2.6 and above) to be set up in your development 
 ## Including the SDK in your project
 
 Ruby SDK is available through Gem . You can download the gem using:
-`gem install ZOHOCRMSDK2_0` 
+`gem install ZOHOCRMSDK2_0_docgo` 
 
 You can include the SDK to your project using:
-`require 'ZOHOCRMSDK2_0'`
+`require 'ZOHOCRMSDK2_0_docgo'`
 
 
 ## Token Persistence

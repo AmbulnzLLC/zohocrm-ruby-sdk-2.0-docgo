@@ -6,15 +6,13 @@ require 'version'
 
 Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.6'
-  spec.name = 'ZOHOCRMSDK2_0'
+  spec.name = 'ZOHOCRMSDK2_0_docgo'
   spec.version       = ZOHOCRMSDK::VERSION
   spec.licenses       = ['Apache-2.0']
-  spec.authors       = ['ZOHO CRM API TEAM']
-  spec.email         = ['support@zohocrm.com']
-  spec.metadata["source_code_uri"] = "https://github.com/zoho/zohocrm-ruby-sdk-2.0"
-  spec.summary       = 'API client for Zoho CRM '
-  spec.description   = 'An API client for CRM customers, with which they can call ZOHO CRM APIs with ease'
-  spec.homepage      = 'https://www.zoho.com/crm/'
+  spec.authors       = ['ZOHO CRM API TEAM','DocGo Engineering']
+  spec.metadata["source_code_uri"] = "https://github.com/AmbulnzLLC/zohocrm-ruby-sdk-2.0-docgo"
+  spec.summary       = 'API client for Zoho CRM - DOCGO FORK of ZOHOCRMSDK2_0'
+  spec.homepage      = 'https://github.com/AmbulnzLLC/zohocrm-ruby-sdk-2.0-docgo'
   spec.files = Dir['src/**/*']
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
